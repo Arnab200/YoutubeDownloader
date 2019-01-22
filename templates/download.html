@@ -1,0 +1,21 @@
+<html>
+    <head>
+      <title>Welcome to Download Page</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+      <div class="container">
+        <h1>Paste YouTube link here</h1>
+        <br>
+        <form action="" method="post">
+          <input type="text" placeholder="Video Link" name="videolink" value="{{
+            request.form.videolink }}">
+          <input class="btn btn-default" type="submit" value="Download">
+        </form>
+        {% if message %}
+          <p class="error"><strong>Status:</strong> {{ message }}
+        {% endif %}
+      </div>
+    </body>
+  </html>
